@@ -1,79 +1,12 @@
-html, body {
-    height: 100%;
-    background-color: #e7e7e7;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Dongle', sans-serif;
-    color: #353839;
-    margin: 0;
-}
-
-body {
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 100px;
-    margin: 0;
-}
-
-.container {
-    width: 100%;
-    height: fit-content;
-    max-height: 500px;
-    display: flex;
-    justify-content: center;
-    column-gap: 50px;
-    flex: 1 0 auto;
-}
-
-#controls {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    max-width: 100px;
-    flex: 1 1 0;
-}
-
-button {
-    height: 50px;
-    background-color: #e7e7e7;
-    border-radius: 5px;
-    border: #353839 1px solid;
-    font-family: 'Dongle', sans-serif;
-    font-size: 24px;
-}
-
-button:hover {
-    transform: scale(1.1); 
-    cursor: pointer;
-}
-
-button:active {
-    background-color: #353839;
-    color: #fff;
-}
-
-#etch {
-    background-color: #fff;
+#wrapper {
     display: inline-grid;
-    flex: 2 1 0;
-    max-height: 500px;
-    max-width: 500px;
     grid-template-columns: repeat(16, 25px);
     grid-template-rows: repeat(16, 25px);
-    border: 1px solid #353839;
+    border: 1px solid black;
 }
 
 .tile {
     border: 0px solid black;
-}
-
-footer {
-    text-align: center;
-    margin-top: auto;
-    flex-shrink: 0;
-    font-size: 30px;
+    width: 25px;
+    height: 25px;
 }

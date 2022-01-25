@@ -1,11 +1,11 @@
-const etch = document.getElementById('etch');
+const wrapper = document.getElementById('wrapper');
 const resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', reset);
 
 let gridSize;
 do {
-    gridSize = prompt('Dimensions? (1-100)');
-} while (gridSize > 100 || gridSize < 1)
+    gridSize = prompt('How big of a grid?');
+} while (gridSize > 100)
 
 let tiles = createGrid(gridSize);
 
@@ -15,11 +15,11 @@ function createGrid(num) {
         let div = document.createElement('div')
         div.classList.add('tile');
         div.addEventListener('mouseover', color);
-        etch.append(div);
+        wrapper.append(div);
     }
     
-    etch.style['grid-template-columns'] = `repeat(${num}, ${100 * (1/num)}%)`;
-    etch.style['grid-template-rows'] = `repeat(${num}, ${100 * (1/num)}%)`;
+    wrapper.style['grid-template-columns'] = `repeat(${num}, 25px)`;
+    wrapper.style['grid-template-rows'] = `repeat(${num}, 25px)`;
 
     return document.getElementsByClassName('tile');
 }
